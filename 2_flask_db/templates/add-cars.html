@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Cars</title>
+    <link rel= "stylesheet" href="/static/css/style_cars.css">
+</head>
+<body>
+    <div class= "container">
+        <h1> Add Car to Dataset</h1>
+            <form action="/add-cars" method="post">
+                <table class="form">
+                    <tr>
+                        <td class="input">
+                            <label for="price">
+                                Price
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="number"
+                                   name="price"
+                                   id="price"
+                                   min="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="brand">
+                                Brand
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="text"
+                                   name="brand"
+                                   id="brand"
+                                   >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="model">
+                                Model
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="text"
+                                   name="model"
+                                   id="model"
+                                   >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="year">
+                                Year
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="number"
+                                   name="year"
+                                   id="year"
+                                   min="1900">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="title_status">
+                                Title Status
+                            </label>
+                        </td>
+                        <td class="input">
+                            <select name="title_status" id="title_status">
+                                <option value="clean vehicle">clean vehicle</option>
+                                <option value="broken vehicle">broken vehicle</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="mileage">
+                                Mileage
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="number"
+                                   name="mileage"
+                                   id="mileage"
+                                   min="0"
+                                   step=".01">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="color">
+                                Color
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="text"
+                                   name="color"
+                                   id="color"
+                                   >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="submit" colspan="2">
+                            <button class="submit" type="submit">
+                                Submit
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form action="/">
+                <input type="submit" class=my_button value="Cancel" />
+            </form>
+    </div>
+</body>
+</html>

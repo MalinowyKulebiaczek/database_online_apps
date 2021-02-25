@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Cars</title>
+    <link rel= "stylesheet" href="/static/css/style_cars.css">
+</head>
+<body>
+    <div class= "container">
+        <h1> Update Cars Dataset</h1>
+        {%if data %}
+            <form action="/update-cars" method="post">
+                <table class="form">
+                    <tr>
+                        <td class="input">
+                            <label for="car-id">
+                                Car ID
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="number"
+                                   name="car-id"
+                                   id="car-id"
+                                   value="{{ data[0] }}"
+                                   readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="price">
+                                Price
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="number"
+                                   name="price"
+                                   id="price"
+                                   value="{{ data[1] }}"
+                                   min="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="brand">
+                                Brand
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="text"
+                                   name="brand"
+                                   id="brand"
+                                   value="{{ data[2] }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="model">
+                                Model
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="text"
+                                   name="model"
+                                   id="model"
+                                   value="{{ data[3] }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="year">
+                                Year
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="number"
+                                   name="year"
+                                   id="year"
+                                   value="{{ data[4] }}"
+                                   min="1900">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="title_status">
+                                Title Status
+                            </label>
+                        </td>
+                        <td class="input">
+                            <select name="title_status" id="title_status" value="{{ data[5] }}">
+                                <option value="clean vehicle">clean vehicle</option>
+                                <option value="broken vehicle">broken vehicle</option>
+
+                                <option value="{{data[5]}}" selected hidden>{{ data[5] }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="mileage">
+                                Mileage
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="number"
+                                   name="mileage"
+                                   id="mileage"
+                                   value="{{ data[6] }}"
+                                   min="0"
+                                   step=".01">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <label for="color">
+                                Color
+                            </label>
+                        </td>
+                        <td class="input">
+                            <input type="text"
+                                   name="color"
+                                   id="color"
+                                   value="{{ data[7] }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="submit" colspan="2">
+                            <button class="submit" type="submit">
+                                Submit
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form action="/">
+                <input type="submit" class=my_button value="Cancel" />
+            </form>
+        {% else %}
+            <h1>no data</h1>
+        {% endif %}
+    </div>
+</body>
+</html>

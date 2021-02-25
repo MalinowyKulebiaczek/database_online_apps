@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OPA - Laboratorium D</title>
+    </head>
+    <body>
+        <div id="app">
+            <h2>Cars database</h2>         
+            
+            <router-view></router-view>
+            
+            <hr>
+            <router-link to="/lista">Lista</router-link>
+            <router-link to="/nowy">Nowy</router-link>
+            
+
+            
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./components/CarLista.js"></script>
+        <script src="./components/CarForm.js"></script>
+        <script src="./components/CarDelete.js"></script>
+        <script src="./components/CarModify.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>

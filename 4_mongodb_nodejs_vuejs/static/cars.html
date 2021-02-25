@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Cars</title>
+    <link rel= "stylesheet" href="/static/css/style_cars.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1> Cars Dataset </h1>
+        <form  class="my_button" action="/add-cars/form">
+            <input type="submit" value="Add record" />
+        </form>
+        {%if data %}
+            <table>
+                <thead>
+                <td> id </td>
+                <td> price </td>
+                <td> brand </td>
+                <td> model </td>
+                <td> year </td>
+                <td> title_status </td>
+                <td> mileage </td>
+                <td> color </td>
+                <td> delete </td>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                        <tr>
+                            <td><a href="/update-cars/{{ row[0] }}">{{ row[0] }}</a></td>
+                            {% for i in range(1,8) %}
+                                <td>{{row[i]}}</td>
+                            {% endfor %}
+                            <td><a href="/delete-cars/{{ row[0] }}"> delete </a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+            </table>
+        {% else %}
+            <h1>no data</h1>
+        {% endif %}
+    </div>
+</body>
+</html>

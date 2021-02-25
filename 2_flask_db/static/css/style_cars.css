@@ -1,0 +1,37 @@
+.container {
+    margin: auto;
+}
+
+.container {
+    width: 1000px;
+}
+
+h1 {color: #31708e;
+    margin-left: 24px;
+    margin-bottom: 12px;
+}
+table{
+    width: 100%;
+    border: 2px solid #5085a5;
+}
+thead{
+    background-color: #8fc1e3;
+}
+tbody{
+    background-color: #f7f9fb;
+}
+td {
+    border: 1px solid #5085a5;
+    padding-left: 6px;
+}
+.my_button  {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100px;
+    height: 40px;
+}
+
+.floated {
+  float:left;
+  margin-right:5px;
+}
