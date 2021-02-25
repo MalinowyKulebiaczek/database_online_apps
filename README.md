@@ -15,4 +15,4 @@ Repository is divided into four directories. Each directory contains similar pro
 1. **1_basic_flask_html** - very basic Flask project in Python
 1. **2_flask_db** - initialization of SQLite database and online app in which user can add/delete records to/from database
 1. **3_mongodb_nodejs** - online app developed in Node.js environment using MongoDB. Features: displaying all database records and adding a new record
-1. **4_mongodb_nodejs_vue_js** - same app as above but with additional features written usng Vue.js such as: modifying and deleting a record.
+1. **4_mongodb_nodejs_vue_js** - same app as above but with additional features written usng Vue.js such as modifying and deleting a record.
